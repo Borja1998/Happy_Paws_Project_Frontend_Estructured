@@ -1,32 +1,28 @@
 import React from 'react';
+import Logo from '../../assets/img/whiteAPaws.png';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-between">
-          <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            <h3 className="text-xl font-bold mb-2">Mi App</h3>
-            <p className="text-gray-400">Una breve descripción de tu aplicación aquí.</p>
-          </div>
-          <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            <h3 className="text-xl font-bold mb-2">Enlaces rápidos</h3>
-            <ul className="text-gray-400">
-              <li className="mb-2"><a href="/" className="hover:text-white">Inicio</a></li>
-              <li className="mb-2"><a href="/about" className="hover:text-white">Acerca de</a></li>
-              <li className="mb-2"><a href="/contact" className="hover:text-white">Contacto</a></li>
-            </ul>
-          </div>
-          <div className="w-full md:w-1/3">
-            <h3 className="text-xl font-bold mb-2">Contáctanos</h3>
-            <p className="text-gray-400">Email: info@miapp.com</p>
-            <p className="text-gray-400">Teléfono: (123) 456-7890</p>
-          </div>
+    <footer className="relative bg-gradient-to-r from-secondaryBlue to-secondaryGreen w-[100vw] h-[60vh] flex flex-col justify-center ">
+      <div className='flex flex-row w-full h-full justify-around items-start text-white'>
+        <div className='flex flex-col items-start relative top-6 right-64'>
+          <h1 className='text-lg'>Apartados:</h1>
+          <Link to={'/'} className='text-lg'>Home</Link>
+          <Link to={'/'} className='text-lg'>Protectoras</Link>
+          <Link to={'/'} className='text-lg'>Voluntariado</Link>
+          <Link to={'/'} className='text-lg'>Inicio de sesión</Link>
+          <Link to={'/'} className='text-lg'>Contacto</Link>
         </div>
-        <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
-          <p>&copy; 2024 Mi App. Todos los derechos reservados.</p>
+
+        <div className='flex flex-col items-start relative top-6 right-84'>
+          <h1 className='text-lg'>Happy Paws</h1>
+          <Link to={'/'} className='text-lg'>Sobre Nosotros</Link>
+          <Link to={'/'} className='text-lg'>Preguntas frecuentes</Link>
         </div>
       </div>
+
+      <img src={Logo} alt="Logo" className='relative w-[5%] h-[90px] bottom-14 align-center justify-center' />
     </footer>
   );
 };
